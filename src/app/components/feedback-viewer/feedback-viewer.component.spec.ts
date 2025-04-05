@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { JobSelectorComponent } from './job-selector.component';
+import { FeedbackViewerComponent } from './feedback-viewer.component';
 
-describe('JobSelectorComponent', () => {
-  let component: JobSelectorComponent;
-  let fixture: ComponentFixture<JobSelectorComponent>;
+describe('FeedbackViewerComponent', () => {
+  let component: FeedbackViewerComponent;
+  let fixture: ComponentFixture<FeedbackViewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [JobSelectorComponent]
+      imports: [FeedbackViewerComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(JobSelectorComponent);
+    fixture = TestBed.createComponent(FeedbackViewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,5 @@
+<div class="p-4">
+    <h2>Select Job Role</h2>
+    <p-dropdown [options]="roles" [(ngModel)]="selectedRole" placeholder="Select a role"></p-dropdown>
+    <button pButton label="Start" (click)="startInterview()" [disabled]="!selectedRole"></button>
+  </div>
