@@ -16,12 +16,12 @@ export class RoleSelectorComponent {
 
 
 
-  roles:any[]=['Frontend Developer', 'Backend Developer', 'Data Engineer']
+  roles:any[]=[]
   selectedRole:string=''
   constructor(private http: HttpClient, private router: Router){
-    // this.http.get<string[]>('http://localhost:3000/api/roles').subscribe(data=>{
-    //   this.roles=data.map(role=>({label:role,value:role}))
-    // })
+    this.http.get<string[]>('http://localhost:3000/api/roles').subscribe(data=>{
+      this.roles=data.map(role=>({label:role,value:role}))
+    })
 
   }
 

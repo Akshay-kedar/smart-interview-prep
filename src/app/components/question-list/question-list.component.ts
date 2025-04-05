@@ -21,8 +21,9 @@ export class QuestionListComponent implements OnInit{
 
   constructor(private http: HttpClient){}
   ngOnInit(): void {
+
     const role = localStorage.getItem('selectedRole');
-    this.http.post<any>('http://lochost:3000/api/questions',{role}).subscribe(res=>{
+    this.http.post<any>('http://localhost:3000/api/questions',{role}).subscribe(res=>{
       this.questions=res.questions;
       this.answers=new Array( this.questions.length).fill('');
       this.feedbacks=new Array(this.questions.length).fill('');
