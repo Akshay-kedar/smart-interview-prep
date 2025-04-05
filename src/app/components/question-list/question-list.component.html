@@ -1,0 +1,10 @@
+<div *ngFor="let q of questions; let i = index" class="p-4">
+    <p-card header="Question {{ i + 1 }}">
+      <p>{{ q }}</p>
+      <textarea rows="4" cols="50" [(ngModel)]="answers[i]" pInputTextarea></textarea>
+      <button pButton label="Get Feedback" (click)="submitAnswer(i)" class="mt-2"></button>
+      <div *ngIf="feedbacks[i]" class="mt-2 p-2 border-round border-1 surface-border">
+        <strong>Feedback:</strong> {{ feedbacks[i] }}
+      </div>
+    </p-card>
+  </div>
