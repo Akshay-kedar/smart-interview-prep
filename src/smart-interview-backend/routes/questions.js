@@ -10,8 +10,7 @@ router.get('/roles', (req, res) => {
   });
 
   router.post('/questions', async (req, res) => {
-    debugger
-    console.log('apikey',openai)
+    
     const { role } = req.body;
     try {
       const completion = await openai.chat.completions.create({
